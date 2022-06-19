@@ -1,0 +1,4 @@
+<form [formGroup]="searchGroup" (ngSubmit)="submitSearch()" >
+  <input type="text" placeholder="Search for a place" formControlName="search">
+  <input type="submit" value="Search" >
+</form>

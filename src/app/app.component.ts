@@ -1,4 +1,6 @@
 import { Component } from '@angular/core';
+import {Place} from "./model/place.model";
+import {PlaceService} from "./service/place.service";
 
 @Component({
   selector: 'app-root',
@@ -6,5 +8,5 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'place-frontend';
+
 }

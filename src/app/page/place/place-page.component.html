@@ -1,0 +1,29 @@
+<<div *ngIf="!place">
+  Loading..
+</div>
+<div *ngIf="place">
+  <div class="row">
+    <div class="col-sm">
+      <h2>{{place.label}}</h2>
+      <div>{{place.location}}</div>
+    </div>
+    <div class="col-sm">
+      <h3>Opening Hours</h3>
+      <table class="table table-hover table-borderless">
+        <tbody>
+          <tr *ngFor="let hours of openingHoursForDisplay">
+            <td>{{hours.startDay}} <ng-container *ngIf="hours.endDay"> - {{hours.endDay}}</ng-container></td>
+            <td>
+              <ng-container *ngIf="hours.isClosed">Closed</ng-container>
+              <div *ngFor="let time of hours.times">
+                {{time}}
+              </div>
+            </td>
+          </tr>
+        </tbody>
+
+      </table>
+    </div>
+  </div>
+
+</div>
